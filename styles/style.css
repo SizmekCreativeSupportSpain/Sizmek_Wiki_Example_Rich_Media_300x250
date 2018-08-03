@@ -1,0 +1,57 @@
+/************
+TAG STYLES
+ ************/
+html, body{
+  width: 100%;
+  height: 100%;
+}
+
+body {
+	margin: 0px;
+	background-color: #FFF;
+	font-family: Arial, sans-serif;
+}
+
+video {
+    width: 100%;	
+    height: 100%;
+}
+
+/*******************
+BANNER STYLES
+*******************/
+#banner{
+	position: absolute;
+	display: block;
+	width: 300px;
+	height: 250px;
+	overflow: hidden;
+	background-image:url("../images/backup.jpg"); 
+}
+
+/************************
+CREATIVE CONTENT STYLES
+************************/
+
+.clickthrough-button {
+	position: absolute;
+	height: 250px;
+	width: 300px;
+	cursor: pointer;
+}
+
+.video-container {
+    position: absolute;	
+	width: 240px;
+    height: 135px;
+    z-index: 2;
+}
+
+.centered {
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
