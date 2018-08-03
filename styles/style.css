@@ -12,11 +12,6 @@ body {
 	font-family: Arial, sans-serif;
 }
 
-video {
-    width: 100%;	
-    height: 100%;
-}
-
 /*******************
 BANNER STYLES
 *******************/
@@ -38,20 +33,4 @@ CREATIVE CONTENT STYLES
 	height: 250px;
 	width: 300px;
 	cursor: pointer;
-}
-
-.video-container {
-    position: absolute;	
-	width: 240px;
-    height: 135px;
-    z-index: 2;
-}
-
-.centered {
-    bottom: 0;
-    left: 0;
-    margin: auto;
-    position: absolute;
-    right: 0;
-    top: 0;
 }

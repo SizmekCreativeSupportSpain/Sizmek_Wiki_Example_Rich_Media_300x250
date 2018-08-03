@@ -35,7 +35,6 @@ function initializeCreative(event) {
 
 	window.registerInteraction = function() {}; //overwrite rI function because it will never actually be called
 	initializeGlobalVariables();
-	initializeVideoTracking();
 	addEventListeners();
 }
 
@@ -46,7 +45,6 @@ function initializeGlobalVariables() {
 
 	bannerDiv = document.getElementById("banner");
 	clickthroughButton = document.getElementById("clickthroughButton");
-	video = document.getElementById("video");
 
 	if (!isMRAID) {
 		sdkData = EB.getSDKData();
@@ -54,13 +52,6 @@ function initializeGlobalVariables() {
 	}
 }
 
-function initializeVideoTracking() {
-	videoTrackingModule = new EBG.VideoModule(video);
-	if (autoPlayVideo && !EB.API.os.ios) {
-		video.muted = true;
-		videoTrackingModule.playVideo(false);
-	}
-}
 
 function addEventListeners() {
 	clickthroughButton.addEventListener("click", handleClickthroughButtonClick);
@@ -82,17 +73,8 @@ EVENT HANDLERS
 *******************/
 
 function handleClickthroughButtonClick() {
-	pauseVideo();
 	EB.clickthrough();
 }
 
-/*******************
-UTILITIES
-*******************/
-function pauseVideo() {
-	if (video) {
-		video.pause();
-	}
-}
 
 window.addEventListener("load", checkIfAdKitReady);
